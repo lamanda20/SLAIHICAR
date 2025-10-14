@@ -1,0 +1,152 @@
+.car__item {
+  border: 1px solid #BDBDBD;
+  padding: 20px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.car__item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #C5A572;
+}
+
+/* IMAGE CONTAINER */
+.car__img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+/* IMAGE ITSELF */
+.car__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* INFO ICONS */
+.car__item-info span i {
+  color: #C5A572;
+  font-size: 1.1rem;
+}
+
+/* BUTTONS */
+.car__item-btn {
+  border-radius: 0;
+  border: none;
+  outline: none;
+  background: #000000;
+  padding: 8px 0px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.car__item-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+}
+
+.car__item-btn a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.car__item-btn a:hover {
+  color: #FFFFFF;
+}
+
+.car__btn-details {
+  background: #C5A572;
+  border-radius: 0px 4px 4px 0px;
+  color: #FFFFFF;
+}
+
+.car__btn-details:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(197, 165, 114, 0.3);
+  color: #FFFFFF;
+}
+
+.car__btn-rent {
+  border-radius: 4px 0px 0px 4px;
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.car__btn-rent:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+}
+
+/* HEADINGS */
+.car__item-content h4 {
+  font-size: 1.8rem;
+  color: #000000;
+}
+
+.car__item-content h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #424242;
+}
+
+/* RESPONSIVE STYLING */
+@media only screen and (max-width: 992px) {
+  .car__item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  .car__item h6 {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .car__item-info {
+    flex-wrap: wrap;
+  }
+
+  .car__item-info span {
+    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+
+  .car__item-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .car__item h4 {
+    font-size: 1rem;
+  }
+
+  .car__item h6 {
+    font-size: 0.9rem;
+  }
+
+  .car__item-info span {
+    font-size: 0.7rem;
+  }
+
+  .car__item-info span i {
+    font-size: 0.9rem;
+  }
+
+  .car__item-btn {
+    font-size: 0.8rem;
+  }
+}

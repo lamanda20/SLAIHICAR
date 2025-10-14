@@ -1,0 +1,482 @@
+/* Common Section Styles */
+.common__section {
+  background: url("../assets/all-images/drive.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 120px 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+.common__section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.common__section-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* ========== NOUVEAU STYLE MODERNE POUR LES TITRES ========== */
+
+.common__title {
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-shadow:
+    3px 3px 6px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(197, 165, 114, 0.5),
+    0 0 60px rgba(197, 165, 114, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: relative;
+  animation: modernTitleGlow 3s ease-in-out infinite alternate;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite, modernTitleGlow 3s ease-in-out infinite alternate;
+}
+
+.title__highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.title__highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(197, 165, 114, 0.3) 50%, transparent 70%);
+  transform: translateX(-100%);
+  animation: shineSweep 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+.title__decorative-line {
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    #C5A572 20%,
+    #D4B583 50%,
+    #C5A572 80%,
+    transparent 100%);
+  margin: 0 auto 30px;
+  position: relative;
+  border-radius: 2px;
+  animation: lineExpand 1s ease-out 0.5s both;
+  overflow: hidden;
+}
+
+.title__decorative-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  animation: lineShimmer 2s ease-in-out infinite 1s;
+}
+
+.title__decorative-line:last-of-type {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.common__section-title {
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+.common__section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #C5A572, #D4B583);
+  border-radius: 2px;
+  animation: expandLine 0.8s ease-out 0.3s both;
+}
+
+.common__section-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-out 0.6s both;
+}
+
+/* ========== NOUVEAUX STYLES MODERNES ========== */
+
+.modern__subtitle-container {
+  margin-top: 40px;
+  animation: fadeInUp 1.2s ease-out 0.4s both;
+}
+
+.subtitle__badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(197, 165, 114, 0.3);
+  border-radius: 50px;
+  padding: 20px 35px;
+  margin-bottom: 30px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle__badge:hover {
+  background: rgba(197, 165, 114, 0.15);
+  border-color: rgba(197, 165, 114, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(197, 165, 114, 0.3);
+}
+
+.badge__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.badge__item i {
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.badge__item.excellence i {
+  color: #FFD700;
+}
+
+.badge__item.confiance i {
+  color: #4CAF50;
+}
+
+.badge__item.innovation i {
+  color: #2196F3;
+}
+
+.badge__item:hover {
+  transform: scale(1.05);
+}
+
+.badge__item:hover i {
+  transform: rotate(360deg);
+}
+
+.badge__separator {
+  color: rgba(197, 165, 114, 0.8);
+  font-size: 1.2rem;
+  margin: 0 25px;
+  font-weight: bold;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.decorative__line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0;
+  animation: slideInFromSides 1s ease-out 0.8s both;
+}
+
+.decorative__line {
+  height: 2px;
+  width: 100px;
+  background: linear-gradient(90deg, transparent, #C5A572, transparent);
+  position: relative;
+  overflow: hidden;
+}
+
+.decorative__line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.decorative__line.left {
+  background: linear-gradient(90deg, transparent, #C5A572);
+}
+
+.decorative__line.right {
+  background: linear-gradient(90deg, #C5A572, transparent);
+}
+
+.decorative__diamond {
+  margin: 0 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(197, 165, 114, 0.2);
+  border: 2px solid #C5A572;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotateDiamond 4s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+}
+
+.decorative__diamond i {
+  color: #C5A572;
+  font-size: 1.2rem;
+  transform: rotate(-45deg);
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.elegant__description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: fadeInScale 1.5s ease-out 1s both;
+}
+
+/* ========== ANIMATIONS MODERNES ========== */
+
+@keyframes modernTitleGlow {
+  0% {
+    text-shadow:
+      3px 3px 6px rgba(0, 0, 0, 0.8),
+      0 0 30px rgba(197, 165, 114, 0.3),
+      0 0 60px rgba(197, 165, 114, 0.1);
+  }
+  100% {
+    text-shadow:
+      3px 3px 10px rgba(0, 0, 0, 0.9),
+      0 0 40px rgba(197, 165, 114, 0.6),
+      0 0 80px rgba(197, 165, 114, 0.4),
+      0 0 120px rgba(197, 165, 114, 0.2);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shineSweep {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes lineExpand {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 150px;
+    opacity: 1;
+  }
+}
+
+@keyframes lineShimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleGlow {
+  0% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(197, 165, 114, 0.3);
+  }
+}
+
+@keyframes expandLine {
+  0% {
+    width: 0;
+    opacity: 0.7;
+  }
+  100% {
+    width: 100px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes slideInFromSides {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes rotateDiamond {
+  0%, 100% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.1);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(-45deg) scale(1.2);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media only screen and (max-width: 768px) {
+  .common__title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .subtitle__badge {
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 20px;
+  }
+
+  .badge__separator {
+    display: none;
+  }
+
+  .badge__item {
+    font-size: 0.9rem;
+  }
+
+  .decorative__line {
+    width: 60px;
+  }
+
+  .decorative__diamond {
+    width: 30px;
+    height: 30px;
+    margin: 0 15px;
+  }
+
+  .elegant__description {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+
+  .title__decorative-line {
+    width: 100px;
+  }
+}

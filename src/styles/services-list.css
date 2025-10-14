@@ -1,0 +1,78 @@
+/* ===========================
+   SERVICE SECTION STYLES
+   =========================== */
+
+.service__item {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.service__item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== ICON ===== */
+.service__item span i {
+  font-size: 2.5rem;
+  color: #96805c; /* Muted gold accent */
+  transition: color 0.3s ease;
+}
+
+.service__item:hover span i {
+  color: #000d6b; /* Deep navy blue accent (matches your theme) */
+}
+
+/* ===== HEADING ===== */
+.service__item h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.service__item:hover h6 {
+  color: #C5A572; /* Match the icon accent on hover */
+}
+
+/* ===== DESCRIPTION ===== */
+.service__item p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media only screen and (max-width: 992px) {
+  .service__item {
+    padding: 1.5rem 1rem;
+  }
+
+  .service__item h6 {
+    font-size: 1.1rem;
+  }
+
+  .service__item p {
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .service__item {
+    padding: 1.2rem 0.8rem;
+  }
+
+  .service__item h6 {
+    font-size: 1rem;
+  }
+
+  .service__item span i {
+    font-size: 2rem;
+  }
+}

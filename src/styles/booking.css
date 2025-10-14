@@ -1,0 +1,395 @@
+/* Booking Page Styles */
+.booking__section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.booking__section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(197, 165, 114, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(44, 62, 80, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.booking__form {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(197, 165, 114, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.booking__title {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.booking__title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #c5a572, #d4b583);
+  border-radius: 2px;
+}
+
+.form__section {
+  margin-bottom: 35px;
+  padding: 25px;
+  background: rgba(248, 249, 250, 0.5);
+  border-radius: 15px;
+  border: 1px solid rgba(197, 165, 114, 0.1);
+}
+
+.section__heading {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section__heading::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(135deg, #c5a572, #d4b583);
+  border-radius: 2px;
+}
+
+.form-group label {
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-control:focus {
+  border-color: #c5a572;
+  box-shadow: 0 0 0 3px rgba(197, 165, 114, 0.1);
+  background: white;
+}
+
+.booking__submit-btn {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border: none;
+  padding: 18px 40px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.booking__submit-btn:hover {
+  background: linear-gradient(135deg, #c5a572 0%, #d4b583 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(197, 165, 114, 0.4);
+}
+
+.booking__submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.booking__submit-btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+.booking__note {
+  background: rgba(197, 165, 114, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.booking__note h6 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.booking__note ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.booking__note li {
+  color: #6c757d;
+  font-size: 13px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* Summary Sidebar */
+.booking__summary {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 20px;
+}
+
+.summary__title {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.car__summary {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.summary__car-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.car__details h5 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.car__model {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.price__summary {
+  border-top: 2px solid #f8f9fa;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.price__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.price__item.total {
+  border-top: 2px solid #c5a572;
+  padding-top: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.price {
+  color: #c5a572;
+  font-weight: 600;
+}
+
+/* Styles pour le bouton Retour moderne */
+.modern-back-btn {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  animation: slideInFromLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-back-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(197, 165, 114, 0.3) !important;
+}
+
+.modern-back-btn:active {
+  transform: translateY(-1px) scale(0.98) !important;
+}
+
+/* Animation pour l'icône */
+.modern-back-btn .ri-arrow-left-line {
+  display: inline-block;
+}
+
+.modern-back-btn:hover .ri-arrow-left-line {
+  animation: arrow-bounce 0.6s ease-in-out;
+}
+
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateX(-3px) rotate(-5deg); }
+  50% { transform: translateX(-6px) rotate(-8deg) scale(1.1); }
+}
+
+/* Effet de pulsation pour attirer l'attention */
+.modern-back-btn.pulse {
+  animation: button-pulse 2s infinite;
+}
+
+@keyframes button-pulse {
+  0% {
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.25);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4), 0 0 0 6px rgba(197, 165, 114, 0.1);
+  }
+  100% {
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.25);
+  }
+}
+
+/* Effet ripple au clic */
+.modern-back-btn:active .click-ripple {
+  width: 200px !important;
+  height: 200px !important;
+}
+
+/* Animation d'apparition pour le bouton */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Variante glassmorphism */
+.modern-back-btn.glass-variant {
+  background: rgba(44, 62, 80, 0.15) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #2c3e50 !important;
+}
+
+.modern-back-btn.glass-variant:hover {
+  background: rgba(44, 62, 80, 0.25) !important;
+  color: white !important;
+}
+
+/* Variante néon */
+.modern-back-btn.neon-variant {
+  background: transparent !important;
+  border: 2px solid #c5a572 !important;
+  color: #c5a572 !important;
+  text-shadow: 0 0 10px rgba(197, 165, 114, 0.5);
+  box-shadow:
+    0 0 20px rgba(197, 165, 114, 0.3),
+    inset 0 0 20px rgba(197, 165, 114, 0.1) !important;
+}
+
+.modern-back-btn.neon-variant:hover {
+  background: rgba(197, 165, 114, 0.1) !important;
+  box-shadow:
+    0 0 30px rgba(197, 165, 114, 0.6),
+    0 0 60px rgba(197, 165, 114, 0.4),
+    inset 0 0 30px rgba(197, 165, 114, 0.2) !important;
+  text-shadow: 0 0 15px rgba(197, 165, 114, 0.8);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 992px) {
+  .booking__form {
+    padding: 30px 20px;
+  }
+
+  .booking__summary {
+    margin-top: 30px;
+    position: static;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .booking__section {
+    padding: 40px 0;
+  }
+
+  .form__section {
+    padding: 20px;
+  }
+
+  .booking__submit-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  .modern-back-btn {
+    padding: 12px 24px !important;
+    font-size: 13px !important;
+    min-width: 120px !important;
+    gap: 8px !important;
+  }
+
+  .modern-back-btn .ri-arrow-left-line {
+    font-size: 16px !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .booking__form {
+    padding: 20px 15px;
+  }
+
+  .booking__summary {
+    padding: 20px;
+  }
+
+  .car__summary {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modern-back-btn {
+    padding: 10px 20px !important;
+    font-size: 12px !important;
+    min-width: 100px !important;
+    border-radius: 25px !important;
+  }
+}
