@@ -39,12 +39,10 @@ const BackToTop = () => {
   };
 
   return (
-    <div
-      className={`floating-actions ${visible ? "visible" : ""}`}
-      aria-hidden={!visible}
-    >
+    <div className="floating-actions-container">
+      {/* Bouton retour en haut - visible seulement lors du scroll */}
       <button
-        className="back-to-top"
+        className={`back-to-top ${visible ? "visible" : ""}`}
         onClick={scrollToTop}
         aria-label="Remonter en haut"
         title="Remonter en haut"
@@ -52,8 +50,9 @@ const BackToTop = () => {
         <i className="ri-arrow-up-s-line" />
       </button>
 
+      {/* Bouton WhatsApp - toujours visible */}
       <button
-        className="whatsapp-fab"
+        className="whatsapp-fab always-visible"
         onClick={openWhatsApp}
         aria-label="Contacter via WhatsApp"
         title="Contacter via WhatsApp"
