@@ -9,6 +9,11 @@
   font-family: "Source Sans Pro", sans-serif;
 }
 
+/* Prevent accidental horizontal scrolling on mobile caused by 100vw or transforms */
+body {
+  overflow-x: hidden;
+}
+
 /* ========= pre-define css ========= */
 h1,
 h2,
