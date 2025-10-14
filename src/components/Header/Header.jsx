@@ -34,6 +34,11 @@ const Header = () => {
   const [navHeight, setNavHeight] = useState(0);
 
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
+  const closeMenu = (e) => {
+    // prevent closing when clicking inside the panel
+    if (e && e.target && e.target.closest && e.target.closest(".menu")) return;
+    if (menuRef.current) menuRef.current.classList.remove("menu__active");
+  };
 
   useEffect(() => {
     const setHeight = () => {
@@ -89,8 +94,19 @@ const Header = () => {
               </h1>
             </div>
 
-            <div className="navigation" ref={menuRef} onClick={toggleMenu}>
-              <div className="menu">
+            <div className="navigation" ref={menuRef} onClick={closeMenu}>
+              <div className="menu" onClick={(e) => e.stopPropagation()}>
+                <button
+                  className="menu__close"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (menuRef.current)
+                      menuRef.current.classList.remove("menu__active");
+                  }}
+                  aria-label="Fermer le menu"
+                >
+                  <i className="ri-close-line"></i>
+                </button>
                 {navLinks.map((item, index) => (
                   <NavLink
                     to={item.path}
