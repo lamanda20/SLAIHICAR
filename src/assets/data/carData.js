@@ -37,6 +37,7 @@ const carData = [
         images: [rangeRover1, rangeRover2, rangeRover3],
         model: "Model-2025",
         price: 130,
+        speed: "230 km/h",
         gps: "GPS Navigation",
         automatic: "Automatic",
         description:
@@ -49,6 +50,7 @@ const carData = [
         images: [troc1, troc2, troc3, troc4, troc5],
         model: "Model-2025",
         price: 95,
+        speed: "205 km/h",
         gps: "GPS Navigation",
         automatic: "Automatic",
         description:
@@ -61,6 +63,7 @@ const carData = [
         images: [porsche1, porsche2, porsche3, porsche4, porsche5],
         model: "Model-2025",
         price: 170,
+        speed: "260 km/h",
         gps: "GPS Premium",
         automatic: "Automatic",
         description:
@@ -73,6 +76,7 @@ const carData = [
         images: [kardian1, kardian2, kardian3],
         model: "Model-2025",
         price: 80,
+        speed: "190 km/h",
         gps: "GPS Navigation",
         automatic: "Automatic",
         description:
@@ -85,12 +89,13 @@ const carData = [
         images: [clio1, clio2],
         model: "Model-2025",
         price: 75,
+        speed: "180 km/h",
         gps: "GPS Navigation",
         automatic: "Automatic",
         description:
             "La Renault Clio 2025 reste une citadine emblématique, avec un style modernisé, un intérieur connecté et une efficacité énergétique améliorée.",
     },
-  
 ];
+
 
 export default carData;
