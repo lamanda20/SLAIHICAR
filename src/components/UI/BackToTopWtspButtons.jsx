@@ -30,7 +30,7 @@ const BackToTop = () => {
   };
 
   const openWhatsApp = () => {
-    const whatsappNumber = "212664645866"; // no + or dashes
+    const whatsappNumber = "212639621297"; // no + or dashes
     const text = encodeURIComponent(
       "Bonjour, je souhaite obtenir des informations sur une réservation."
     );
