@@ -107,6 +107,18 @@
   border-bottom: 1px solid #bdbdbd;
 }
 
+/* sticky header */
+.main__navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+  background: #ffffffcc; /* slight transparency to blend */
+  backdrop-filter: blur(4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
 .mobile__menu i {
   color: #000;
   font-size: 1.3rem;

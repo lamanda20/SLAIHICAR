@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Container } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
 import "../../styles/header.css";
@@ -29,13 +29,39 @@ const navLinks = [
 
 const Header = () => {
   const menuRef = useRef(null);
+  const navRef = useRef(null);
+  const [isSticky, setIsSticky] = useState(false);
+  const [navHeight, setNavHeight] = useState(0);
 
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
+
+  useEffect(() => {
+    const setHeight = () => {
+      if (navRef.current) setNavHeight(navRef.current.offsetHeight || 0);
+    };
+
+    const onScroll = () => {
+      // when scrolled more than nav height (or 100px) make it sticky
+      const threshold = navRef.current ? navRef.current.offsetHeight : 100;
+      setIsSticky(window.scrollY > threshold);
+    };
+
+    setHeight();
+    window.addEventListener("resize", setHeight);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    // initial
+    onScroll();
+
+    return () => {
+      window.removeEventListener("resize", setHeight);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
 
   return (
     <header className="header">
       {/* ========== main navigation =========== */}
-      <div className="main__navbar">
+      <div ref={navRef} className={`main__navbar ${isSticky ? "sticky" : ""}`}>
         <Container>
           <div className="navigation__wrapper d-flex align-items-center justify-content-between">
             <span className="mobile__menu">
@@ -90,6 +116,8 @@ const Header = () => {
           </div>
         </Container>
       </div>
+      {/* placeholder to avoid content jump when navbar becomes position:fixed */}
+      <div style={{ height: isSticky ? navHeight : 0 }} aria-hidden="true" />
     </header>
   );
 };
