@@ -15,6 +15,31 @@
   box-sizing: border-box;
 }
 
+/* Defensive: ensure header and sticky navbar never create horizontal scroll */
+html,
+body,
+.header {
+  width: 100%;
+  overflow-x: hidden; /* extra safety in case some child overflows */
+}
+
+/* Ensure the sticky navbar never exceeds the viewport width */
+.main__navbar.sticky {
+  /* keep it constrained to the viewport width explicitly */
+  max-width: 100vw;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Constrain the inner container to avoid added horizontal padding from framework */
+.main__navbar > .container {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow: visible;
+}
+
 .logo img {
   max-width: 100%;
   height: auto; /* keep aspect ratio */
@@ -67,6 +92,8 @@
   background: #ffffffcc; /* slight transparency to blend */
   backdrop-filter: blur(4px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .mobile__menu i {
