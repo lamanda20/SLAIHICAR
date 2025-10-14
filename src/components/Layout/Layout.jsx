@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Routers from "../../routers/Routers";
-import BackToTop from "../UI/BackToTop";
+import BackToTop from "../UI/BackToTopWtspButtons";
 
 const Layout = () => {
   return (
