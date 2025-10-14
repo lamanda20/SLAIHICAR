@@ -6,6 +6,21 @@
   border-bottom: 1px solid #bdbdbd; /* subtle divider */
 }
 
+/* Prevent header from causing horizontal overflow */
+.header,
+.main__navbar,
+.navigation__wrapper {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto; /* keep aspect ratio */
+  display: block;
+}
+
 .header__top__left {
   display: flex;
   align-items: center;
@@ -152,6 +167,7 @@
     position: fixed;
     top: 0;
     right: 0;
+    left: 0; /* ensure overlay spans full viewport and doesn't shift */
     z-index: 9999;
     display: none; /* shown when .menu__active is toggled on this element */
     align-items: flex-start;
@@ -162,6 +178,7 @@
   /* show the overlay when active */
   .navigation.menu__active {
     display: flex;
+    overflow-x: hidden; /* prevent its children from creating horizontal scroll */
   }
 
   /* full-width menu panel on mobile (right-aligned content) */
