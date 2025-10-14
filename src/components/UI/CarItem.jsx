@@ -4,27 +4,18 @@ import { useNavigate } from "react-router-dom";
 import "../../styles/car-item.css";
 
 const CarItem = (props) => {
-    const { images, model, carName, automatic, speed, price } = props.item;
+    const { images, model, carName, automatic, fuel, price } = props.item;
     const navigate = useNavigate();
 
     const imgUrl = images && images.length > 0 ? images[0] : "";
 
     const handleNavigation = (path) => {
-        // Navigation vers la nouvelle page
         navigate(path);
 
-        // Force scroll vers le tout début de la page après navigation
+        // Scroll to top after navigation
         setTimeout(() => {
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'smooth'
-            });
-
-            // Double sécurité avec un scroll instantané
-            setTimeout(() => {
-                window.scrollTo(0, 0);
-            }, 50);
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            setTimeout(() => window.scrollTo(0, 0), 50);
         }, 50);
     };
 
@@ -49,7 +40,7 @@ const CarItem = (props) => {
                             <i className="ri-settings-2-line"></i> {automatic}
                         </span>
                         <span className="d-flex align-items-center gap-1">
-                            <i className="ri-timer-flash-line"></i> {speed}
+                            <i className="ri-gas-station-line"></i> {fuel}
                         </span>
                     </div>
 
