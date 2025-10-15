@@ -32,8 +32,13 @@ const Header = () => {
   const navRef = useRef(null);
   const [isSticky, setIsSticky] = useState(false);
   const [navHeight, setNavHeight] = useState(0);
+  const [mobileMenuToggled, setMobileMenuToggled] = useState(false);
 
-  const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
+  const toggleMenu = () => {
+    menuRef.current.classList.toggle("menu__active");
+    setMobileMenuToggled(menuRef.current.classList.contains("menu__active"));
+  };
+
   const closeMenu = (e) => {
     // prevent closing when clicking inside the panel
     if (e && e.target && e.target.closest && e.target.closest(".menu")) return;
@@ -66,7 +71,12 @@ const Header = () => {
   return (
     <header className="header">
       {/* ========== main navigation =========== */}
-      <div ref={navRef} className={`main__navbar ${isSticky ? "sticky" : ""}`}>
+      <div
+        ref={navRef}
+        className={`main__navbar ${
+          isSticky && !mobileMenuToggled ? "sticky" : ""
+        }`}
+      >
         <Container>
           <div className="navigation__wrapper d-flex align-items-center justify-content-between">
             <span className="mobile__menu">
@@ -114,6 +124,12 @@ const Header = () => {
                       navClass.isActive ? "nav__active nav__item" : "nav__item"
                     }
                     key={index}
+                    onClick={() => {
+                      if (menuRef.current) {
+                        menuRef.current.classList.remove("menu__active");
+                        setMobileMenuToggled(false);
+                      }
+                    }}
                   >
                     {item.display}
                   </NavLink>
