@@ -1,8 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "reactstrap";
 import "../../styles/common-section.css";
 
 const CommonSection = ({ title }) => {
+  // show/hide the mouse scroll hint; remember user's choice
+  const [showScrollHint, setShowScrollHint] = useState(() => {
+    try {
+      return localStorage.getItem("scrollHintHidden") !== "true";
+    } catch (e) {
+      return true;
+    }
+  });
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.pageYOffset > 20 && showScrollHint) {
+        setShowScrollHint(false);
+        try {
+          localStorage.setItem("scrollHintHidden", "true");
+        } catch (e) {}
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [showScrollHint]);
+
+  const handleHintClick = () => {
+    // Smooth scroll one viewport down (adjust offset if header is fixed)
+    const offset = Math.max(window.innerHeight - 120, 300);
+    window.scrollBy({ top: offset, behavior: "smooth" });
+    setShowScrollHint(false);
+    try {
+      localStorage.setItem("scrollHintHidden", "true");
+    } catch (e) {}
+  };
+
   return (
     <section className="common__section mb-5">
       <Container className="text-center">
@@ -45,6 +78,21 @@ const CommonSection = ({ title }) => {
             <p className="elegant__description">
               Votre partenaire de confiance pour une mobilité d'exception
             </p>
+          </div>
+
+          {/* Small mouse scroll hint placed under the hero content; hides on click or on scroll */}
+          <div className="scroll-mouse-container">
+            {showScrollHint && (
+              <button
+                className="scroll-mouse-hint"
+                onClick={handleHintClick}
+                aria-label="Bascule"
+                title="Bascule"
+              >
+                <i className="ri-mouse-line" />
+                <span className="scroll-hint-label">Bascule</span>
+              </button>
+            )}
           </div>
         </div>
       </Container>

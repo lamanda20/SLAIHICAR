@@ -4,7 +4,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 120px 0px;
+  /* Reduce vertical spacing so hero doesn't fill the whole viewport */
+  padding: 60px 0;
+  min-height: 140px;
   position: relative;
   overflow: hidden;
 }
@@ -31,13 +33,14 @@
 
 .common__title {
   color: #ffffff;
-  font-size: 4rem;
+  /* Smaller title so header stays compact across pages */
+  font-size: 2.2rem;
   font-weight: 900;
   margin-bottom: 20px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 30px rgba(197, 165, 114, 0.5),
     0 0 60px rgba(197, 165, 114, 0.3);
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   position: relative;
   animation: modernTitleGlow 3s ease-in-out infinite alternate;
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
@@ -80,7 +83,7 @@
 }
 
 .title__decorative-line {
-  width: 150px;
+  width: 110px;
   height: 4px;
   background: linear-gradient(
     90deg,
@@ -157,19 +160,19 @@
 /* ========== NOUVEAUX STYLES MODERNES ========== */
 
 .modern__subtitle-container {
-  margin-top: 40px;
+  margin-top: 18px;
   animation: fadeInUp 1.2s ease-out 0.4s both;
 }
 
 .subtitle__badge {
   display: inline-flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(197, 165, 114, 0.3);
-  border-radius: 50px;
-  padding: 20px 35px;
-  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(197, 165, 114, 0.18);
+  border-radius: 40px;
+  padding: 10px 18px;
+  margin-bottom: 16px;
   transition: all 0.4s ease;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
@@ -187,7 +190,7 @@
   gap: 8px;
   color: #ffffff;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.92rem;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
 }
@@ -220,7 +223,7 @@
 .badge__separator {
   color: rgba(197, 165, 114, 0.8);
   font-size: 1.2rem;
-  margin: 0 25px;
+  margin: 0 14px;
   font-weight: bold;
   animation: pulse 2s ease-in-out infinite;
 }
@@ -288,7 +291,7 @@
 
 .elegant__description {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   font-weight: 400;
   font-style: italic;
   letter-spacing: 0.5px;
@@ -502,4 +505,21 @@
   .title__decorative-line {
     width: 100px;
   }
+}
+
+/* Make the hero compact on smaller screens so it never fills the whole viewport */
+@media (max-width: 992px) {
+  .common__section { padding: 40px 0; min-height: 120px; }
+  .common__title { font-size: 1.8rem; letter-spacing: 1.5px; }
+  .title__decorative-line { width: 80px; }
+  .modern__subtitle-container { margin-top: 12px; }
+  .subtitle__badge { padding: 8px 12px; }
+  .badge__item { font-size: 0.88rem; }
+}
+
+@media (max-width: 576px) {
+  .common__section { padding: 28px 0; min-height: 100px; }
+  .common__title { font-size: 1.4rem; }
+  .badge__item { font-size: 0.8rem; }
+  .badge__separator { margin: 0 8px; font-size: 0.95rem; }
 }

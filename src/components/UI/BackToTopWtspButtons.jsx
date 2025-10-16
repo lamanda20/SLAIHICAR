@@ -3,6 +3,14 @@ import "../../styles/back-to-top-wtsp-buttons.css";
 
 const BackToTop = () => {
   const [visible, setVisible] = useState(false);
+  // show/hide the small mouse hint; remember user preference in localStorage
+  const [showMouseHint, setShowMouseHint] = useState(() => {
+    try {
+      return localStorage.getItem("mouseHintHidden") !== "true";
+    } catch (e) {
+      return true;
+    }
+  });
 
   useEffect(() => {
     
@@ -38,8 +46,29 @@ const BackToTop = () => {
     window.open(waLink, "_blank");
   };
 
+  const hideMouseHint = () => {
+    setShowMouseHint(false);
+    try {
+      localStorage.setItem("mouseHintHidden", "true");
+    } catch (e) {
+      // ignore storage errors
+    }
+  };
+
   return (
     <div className="floating-actions-container">
+      {/* Small mouse hint that says 'Bascule' — disappears when clicked and remembers choice */}
+      {showMouseHint && (
+        <button
+          className="mouse-hint"
+          onClick={hideMouseHint}
+          aria-label="Bascule - masquer"
+          title="Bascule"
+        >
+          <i className="ri-mouse-line" />
+          <span className="mouse-label">Bascule</span>
+        </button>
+      )}
       {/* Bouton retour en haut - visible seulement lors du scroll */}
       <button
         className={`back-to-top ${visible ? "visible" : ""}`}
