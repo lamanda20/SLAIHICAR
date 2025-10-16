@@ -3,11 +3,6 @@ import Slider from "react-slick";
 
 import "../../styles/testimonial.css";
 
-import ava01 from "../../assets/all-images/ava-1.jpg";
-import ava02 from "../../assets/all-images/ava-2.jpg";
-import ava03 from "../../assets/all-images/ava-3.jpg";
-import ava04 from "../../assets/all-images/ava-4.jpg";
-
 const Testimonial = () => {
   const settings = {
     dots: true,
@@ -45,7 +40,6 @@ const Testimonial = () => {
           SLAIHI Car offre un service irréprochable ! La réservation a été simple et rapide, et la voiture était en excellent état. Le personnel est très professionnel et à l’écoute. Je recommande vivement cette agence pour vos déplacements.
         </p>
         <div className="mt-3 d-flex align-items-center gap-4">
-          <img src={ava01} alt="" className="w-25 h-25 rounded-2" />
           <div>
             <h6 className="mb-0 mt-3">Sophie Martin</h6>
             <p className="section__description">Cliente</p>
@@ -58,7 +52,6 @@ const Testimonial = () => {
           Très satisfait de mon expérience avec SLAIHI Car. Les tarifs sont compétitifs et la prise en charge du véhicule s’est faite sans attente. Je n’hésiterai pas à refaire appel à leurs services lors de mon prochain séjour.
         </p>
         <div className="mt-3 d-flex align-items-center gap-4">
-          <img src={ava02} alt="" className="w-25 h-25 rounded-2" />
           <div>
             <h6 className="mb-0 mt-3">Lucas Dupont</h6>
             <p className="section__description">Client</p>
@@ -71,7 +64,6 @@ const Testimonial = () => {
           J’ai loué une voiture chez SLAIHI Car pour un week-end en famille. Le véhicule était propre, récent et parfaitement adapté à nos besoins. Merci à toute l’équipe pour leur accueil chaleureux et leur efficacité.
         </p>
         <div className="mt-3 d-flex align-items-center gap-4">
-          <img src={ava03} alt="" className="w-25 h-25 rounded-2" />
           <div>
             <h6 className="mb-0 mt-3">Claire Bernard</h6>
             <p className="section__description">Cliente</p>
@@ -84,7 +76,6 @@ const Testimonial = () => {
           SLAIHI Car propose un large choix de véhicules récents et bien entretenus. J’ai particulièrement apprécié la flexibilité lors de la restitution du véhicule et la disponibilité du service client. Une expérience à renouveler !
         </p>
         <div className="mt-3 d-flex align-items-center gap-4">
-          <img src={ava04} alt="" className="w-25 h-25 rounded-2" />
           <div>
             <h6 className="mb-0 mt-3">Ahmed El Mansouri</h6>
             <p className="section__description">Client</p>

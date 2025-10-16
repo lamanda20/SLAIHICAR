@@ -22,7 +22,7 @@ const HeroSlider = () => {
       <div className="slider__item slider__item-01 mt0">
         <Container>
           <div className="slider__content ">
-            <h4 className="text-light mb-3">À partir de 70€ par jour</h4>
+            <h4 className="text-light mb-3">À partir de 30€ par jour</h4>
             <h1 className="text-light mb-4">Louez votre voiture idéale dès aujourd'hui</h1>
             <button className="btn reserve__btn mt-4">
               <Link to="/cars">Voir les véhicules</Link>

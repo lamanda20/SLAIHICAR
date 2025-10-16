@@ -66,10 +66,10 @@ const Footer = () => {
           <Col lg="3" md="4" sm="6">
             <div className="mb-4">
               <h5 className="footer__link-title mb-4">Agence principale</h5>
-              <p className="office__info">45 Avenue de la Liberté, 75000 Paris, France</p>
-              <p className="office__info">Téléphone : +33 1 23 45 67 89</p>
-              <p className="office__info">Email : contact@slaihicar.fr</p>
-              <p className="office__info">Horaires : 8h00 - 20h00 (Lun - Sam)</p>
+              <p className="office__info">Hay Mabrouka, Marrakech</p>
+              <p className="office__info">Téléphone : +212 6 64 64 58 66</p>
+              <p className="office__info">Email : www.slaihicar.com</p>
+              <p className="office__info">Horaires : 8h00 - 22h00 (Lun - Sam)</p>
             </div>
           </Col>
 
