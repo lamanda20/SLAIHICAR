@@ -11,6 +11,9 @@ import troc2 from "../all-images/cars-img/troc-2.jpeg";
 import troc3 from "../all-images/cars-img/troc-3.jpeg";
 import troc4 from "../all-images/cars-img/troc-4.jpeg";
 import troc5 from "../all-images/cars-img/troc-5.jpeg";
+import troc6 from "../all-images/cars-img/troc-6.jpeg";
+import troc7 from "../all-images/cars-img/troc-7.jpeg";
+import troc8 from "../all-images/cars-img/troc-8.jpeg";
 
 // Porsche Macan
 import porsche1 from "../all-images/cars-img/porsche-1.jpeg";
@@ -47,7 +50,7 @@ const carData = [
         id: 2,
         brand: "Volkswagen",
         carName: "Volkswagen T-Roc",
-        images: [troc1, troc2, troc3, troc4, troc5],
+        images: [troc1, troc2, troc3, troc4, troc5, troc6, troc7, troc8],
         model: "Model-2025",
         price: 50,
         fuel: "Essence",
