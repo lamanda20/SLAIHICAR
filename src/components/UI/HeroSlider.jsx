@@ -34,7 +34,7 @@ const HeroSlider = () => {
       <div className="slider__item slider__item-02 mt0">
         <Container>
           <div className="slider__content ">
-            <h4 className="text-light mb-3">Offre spéciale : -50% sur la première location</h4>
+              <h4 className="text-light mb-3">Kilométrage illimité sur toutes nos locations</h4>
             <h1 className="text-light mb-4">Réservez maintenant et économisez</h1>
             <button className="btn reserve__btn mt-4">
               <Link to="/cars">Réserver une voiture</Link>
