@@ -31,6 +31,13 @@ import kardian3 from "../all-images/cars-img/kardian-3.jpeg";
 import clio1 from "../all-images/cars-img/clio-1.jpeg";
 import clio2 from "../all-images/cars-img/clio-2.jpeg";
 
+// Volkswagen Touareg
+import touareg1 from "../all-images/cars-img/touareg-1.jpeg";
+import touareg2 from "../all-images/cars-img/touareg-2.jpeg";
+import touareg3 from "../all-images/cars-img/touareg-3.jpeg";
+import touareg4 from "../all-images/cars-img/touareg-4.jpeg";
+import touareg5 from "../all-images/cars-img/touareg-5.jpeg";
+
 
 const carData = [
     {
@@ -98,6 +105,20 @@ const carData = [
         description:
             "La Renault Clio 2025 reste une citadine emblématique, avec un style modernisé, un intérieur connecté et une efficacité énergétique améliorée.",
     },
+    {
+        id: 6,
+        brand: "Volkswagen",
+        carName: "Touareg",
+        images: [touareg1, touareg2, touareg3, touareg4, touareg5],
+        model: "Model-2025",
+        price: 90,
+        fuel: "Diesel",
+        gps: "GPS Premium",
+        automatic: "Automatic",
+        description:
+            "Le Volkswagen Touareg 2025 est un SUV de luxe alliant performance, confort et technologie avancée pour une expérience de conduite exceptionnelle.",
+
+    }
 ];
 
 

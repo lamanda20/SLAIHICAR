@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { useParams, useNavigate } from "react-router-dom";
 import Helmet from "../components/Helmet/Helmet";
-import CommonSection from "../components/UI/CommonSection";
 import carData from "../assets/data/carData";
 import { Link } from "react-router-dom";
 
@@ -182,7 +181,7 @@ const CarDetails = () => {
 
                                 <div className="car__rent-price d-flex align-items-center mt-3">
                                     <h6 className="rent__price fw-bold fs-4">
-                                        {singleCarItem.price}€<span>/jour</span>
+                                        À partir de {singleCarItem.price}€<span>/jour</span>
                                     </h6>
                                 </div>
 
@@ -374,4 +373,3 @@ const CarDetails = () => {
 };
 
 export default CarDetails;
-

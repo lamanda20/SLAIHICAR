@@ -455,11 +455,11 @@ const Booking = () => {
                 <div className="price__summary">
                   <div className="price__item">
                     <span>Prix par jour</span>
-                    <span className="price">{car.price}€</span>
+                    <span className="price">À partir de {car.price}€</span>
                   </div>
                   <div className="price__item total">
                     <span>Total estimé</span>
-                    <span className="price">{car.price}€ / jour</span>
+                    <span className="price">À partir de {car.price}€ / jour</span>
                   </div>
                 </div>
 
