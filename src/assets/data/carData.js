@@ -30,6 +30,13 @@ import kardian3 from "../all-images/cars-img/kardian-3.jpeg";
 // Renault Clio
 import clio1 from "../all-images/cars-img/clio-1.jpeg";
 import clio2 from "../all-images/cars-img/clio-2.jpeg";
+import clio3 from "../all-images/cars-img/clio-3.jpeg";
+import clio4 from "../all-images/cars-img/clio-4.jpeg";
+import clio5 from "../all-images/cars-img/clio-5.jpeg";
+import clio6 from "../all-images/cars-img/clio-6.jpeg";
+import clio7 from "../all-images/cars-img/clio-7.jpeg";
+import clio8 from "../all-images/cars-img/clio-8.jpeg";
+import clio9 from "../all-images/cars-img/clio-9.jpeg";
 
 // Volkswagen Touareg
 import touareg1 from "../all-images/cars-img/touareg-1.jpeg";
@@ -96,7 +103,7 @@ const carData = [
         id: 5,
         brand: "Renault",
         carName: "Renault Clio",
-        images: [clio1, clio2],
+        images: [clio3, clio4, clio5, clio6, clio7, clio8, clio9, clio1, clio2],
         model: "Model-2025",
         price: 30,
         fuel: "Essence",
