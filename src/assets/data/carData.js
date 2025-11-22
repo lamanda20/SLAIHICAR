@@ -4,6 +4,7 @@
 import rangeRover1 from "../all-images/cars-img/range-rover-1.jpeg";
 import rangeRover2 from "../all-images/cars-img/range-rover-2.jpeg";
 import rangeRover3 from "../all-images/cars-img/range-rover-3.jpeg";
+import rangeRover4 from "../all-images/cars-img/range-rover-4.jpeg";
 
 // Volkswagen T-Roc
 import troc1 from "../all-images/cars-img/troc-1.jpeg";
@@ -14,6 +15,8 @@ import troc5 from "../all-images/cars-img/troc-5.jpeg";
 import troc6 from "../all-images/cars-img/troc-6.jpeg";
 import troc7 from "../all-images/cars-img/troc-7.jpeg";
 import troc8 from "../all-images/cars-img/troc-8.jpeg";
+import troc9 from "../all-images/cars-img/troc-9.jpeg";
+import troc10 from "../all-images/cars-img/troc-10.jpeg";
 
 // Porsche Macan
 import porsche1 from "../all-images/cars-img/porsche-1.jpeg";
@@ -38,6 +41,13 @@ import clio7 from "../all-images/cars-img/clio-7.jpeg";
 import clio8 from "../all-images/cars-img/clio-8.jpeg";
 import clio9 from "../all-images/cars-img/clio-9.jpeg";
 
+// Cupra Leon VZ
+import cupra1 from "../all-images/cars-img/cupra-1.jpeg";
+import cupra2 from "../all-images/cars-img/cupra-2.jpeg";
+import cupra3 from "../all-images/cars-img/cupra-3.jpeg";
+import cupra4 from "../all-images/cars-img/cupra-4.jpeg";
+import cupra5 from "../all-images/cars-img/cupra-5.jpeg";
+
 // Volkswagen Touareg
 import touareg1 from "../all-images/cars-img/touareg-1.jpeg";
 import touareg2 from "../all-images/cars-img/touareg-2.jpeg";
@@ -51,10 +61,10 @@ const carData = [
         id: 1,
         brand: "Range Rover",
         carName: "Range Rover Evoque",
-        images: [rangeRover1, rangeRover2, rangeRover3],
+        images: [rangeRover1, rangeRover2, rangeRover3, rangeRover4],
         model: "Model-2025",
         price: 90,
-        fuel: "Essence",
+        fuel: "Diesel",
         gps: "GPS Navigation",
         automatic: "Automatic",
         description:
@@ -64,10 +74,10 @@ const carData = [
         id: 2,
         brand: "Volkswagen",
         carName: "Volkswagen T-Roc",
-        images: [troc1, troc2, troc3, troc4, troc5, troc6, troc7, troc8],
+        images: [troc7, troc1, troc8, troc9, troc2, troc3, troc4, troc5, troc6, troc10],
         model: "Model-2025",
         price: 50,
-        fuel: "Essence",
+        fuel: "Diesel",
         gps: "GPS Navigation",
         automatic: "Automatic",
         description:
@@ -125,6 +135,18 @@ const carData = [
         description:
             "Le Volkswagen Touareg 2025 est un SUV de luxe alliant performance, confort et technologie avancée pour une expérience de conduite exceptionnelle.",
 
+    },
+    {
+        id: 7,
+        brand: "Cupra",
+        carName: "Leon VZ",
+        images: [cupra1, cupra2, cupra3, cupra4, cupra5],
+        model: "Model-2025",
+        price: 70,
+        fuel: "Essence",
+        gps: "GPS Premium",
+        automatic: "Automatic",
+        description: "La Cupra Leon VZ 2025 est la version sportive de la compacte, offrant une expérience de conduite dynamique grâce à son moteur Essence puissant (300 ch et plus selon la version) et son design athlétique. Une véritable 'hot hatch'."
     }
 ];
 

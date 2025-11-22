@@ -60,11 +60,11 @@ const Contact = () => {
               <div className="contact__info">
                 <h6 className="fw-bold">Informations de contact</h6>
                 <p className="section__description mb-0">
-                  42 Avenue des Champs-Élysées, 75008 Paris, France
+                  Hay Mabrouka, Marrakech
                 </p>
                 <div className="d-flex align-items-center gap-2">
                   <h6 className="fs-6 mb-0">Téléphone :</h6>
-                  <p className="section__description mb-0">+33 1 23 45 67 89</p>
+                  <p className="section__description mb-0">+212 6 64 64 58 66</p>
                 </div>
 
                 <div className="d-flex align-items-center gap-2">
