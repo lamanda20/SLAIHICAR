@@ -69,7 +69,7 @@ const Footer = () => {
               <p className="office__info">Hay Mabrouka, Marrakech</p>
               <p className="office__info">Téléphone : +212 6 64 64 58 66</p>
               <p className="office__info">Email : www.slaihicar.com</p>
-              <p className="office__info">Horaires : 8h00 - 22h00 (Lun - Sam)</p>
+              <p className="office__info">24h/24</p>
             </div>
           </Col>
 
