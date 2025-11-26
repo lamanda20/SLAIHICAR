@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { Container } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
 import "../../styles/header.css";
-import logoImg from "../../assets/all-images/logo.png";
+import logoImg from "../../assets/all-images/logo.jpg";
 
 const navLinks = [
   {
